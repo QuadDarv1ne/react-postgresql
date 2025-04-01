@@ -10,6 +10,50 @@
 - Отображение списка всех торговцев.
 - Взаимодействие с базой данных `PostgreSQL` через `API`, созданное на `Node.js` и `Express`
 
+## Структура проекта
+
+```textline
+react-postgresql/
+│
+├── backend/                      # Серверная часть приложения
+│   ├── config/                   # Конфигурация базы данных
+│   │   └── db.js
+│   ├── controllers/              # Логика обработки запросов
+│   │   └── merchantController.js
+│   ├── models/                   # Взаимодействие с базой данных
+│   │   └── merchantModel.js
+│   ├── routes/                   # Маршруты API
+│   │   └── merchantRoutes.js
+│   ├── middlewares/              # Средства обработки
+│   │   ├── authMiddleware.js
+│   │   └── errorMiddleware.js
+│   ├── utils/                    # Утилиты
+│   │   ├── logger.js
+│   │   └── validator.js
+│   ├── app.js                    # Основной файл приложения
+│   └── server.js                 # Запуск сервера
+│
+├── frontend/                     # Клиентская часть приложения
+│   ├── public/                   # Статические файлы
+│   │   └── index.html
+│   ├── src/
+│   │   ├── components/           # Компоненты React
+│   │   │   ├── MerchantList.js
+│   │   │   └── MerchantForm.js
+│   │   ├── services/             # Сервисы для взаимодействия с API
+│   │   │   └── merchantService.js
+│   │   ├── utils/                # Утилиты
+│   │   │   └── api.js
+│   │   ├── App.js                # Основной компонент приложения
+│   │   └── index.js              # Точка входа в приложение
+│   └── .env                      # Переменные окружения
+│
+├── .gitignore                    # Файлы и директории, которые Git должен игнорировать
+├── package.json                  # Метаданные проекта и зависимости
+├── README.md                     # Документация проекта
+└── LICENSE                       # Лицензия
+```
+
 ## Установка и запуск
 
 ### Предварительные условия
